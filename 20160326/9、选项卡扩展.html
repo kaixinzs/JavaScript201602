@@ -79,11 +79,11 @@
         oDivs[n].className = "select";
     }
 
-    //    for (var i = 0; i < oLis.length; i++) {
-    //        oLis[i].onclick = function () {
-    //            tabChange(i);
-    //        }
-    //    }
+        for (var i = 0; i < oLis.length; i++) {
+            oLis[i].onclick = function () {
+                tabChange(i);
+            }
+        }
     //->分析上述循环绑定不行的原因?
 
     //1、自定义属性
@@ -103,13 +103,7 @@
     //        })(i);
     //    }
 
-    for (var i = 0; i < oLis.length; i++) {
-        oLis[i].onclick = (function (i) {
-            return function () {
-                tabChange(i);
-            }
-        })(i);
-    }
+//
 </script>
 </body>
 </html>
